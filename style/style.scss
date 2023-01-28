@@ -38,6 +38,31 @@
             border-radius: 20px;
         }
     }
+
+    .logout {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: white;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 80px;
+        width: 80px;
+
+        img {
+            width: 30px;
+            height: 30px;
+
+            border-radius: 0px;
+            margin: 0px;
+        }
+    }
 }
 
 .bottom-panel {

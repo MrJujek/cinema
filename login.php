@@ -32,7 +32,7 @@
             $_SESSION['login'] = $_POST['login'];
 
             $_SESSION['id'] = $response[0]['id'];
-            header("Location: kino.php");
+            header("Location: cinema.php");
         }else{
             echo ("Wrong password or login");
             header("Location: login.php");

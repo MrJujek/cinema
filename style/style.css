@@ -58,6 +58,39 @@
   border-radius: 20px;
 }
 
+.top-panel .logout {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80px;
+  width: 80px;
+}
+
+.top-panel .logout img {
+  width: 30px;
+  height: 30px;
+  border-radius: 0px;
+  margin: 0px;
+}
+
 .bottom-panel {
   display: -webkit-box;
   display: -ms-flexbox;

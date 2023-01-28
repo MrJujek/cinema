@@ -50,11 +50,16 @@
                 <label>Password:</label>
                 <input type="password" name="pass" required />
 
-                <input type="submit" value="Log in"></input>
+                <input type="submit" value="Sign in"></input>
             </form>
             OR
             <a href="register.php">Sign up</a>
         </div>
+    </div>
+    
+    <div class="footer">
+        <span>Julian Dworzycki</span>
+        <span>© Cinema 2022</span>
     </div>
 </body>
 

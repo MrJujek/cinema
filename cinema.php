@@ -13,6 +13,10 @@
         Films
         <div id="films"></div>
     </div>
+    <div class="footer">
+        <span>Julian Dworzycki</span>
+        <span>© Cinema 2022</span>
+    </div>
     <script src="./js/cinema.js"></script>
     
     <?php

@@ -1,0 +1,72 @@
+#films {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5px;
+
+    .film {
+        margin: 10px;
+        padding: 10px;
+        width: 280px;
+        min-height: 490px;
+        text-align: center;
+        border: 1px solid rgb(75, 152, 253);
+        border-radius: 5px;
+
+        p {
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 30px;
+        }
+
+        .film-img {
+            width: 240px;
+            height: 360px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .divForTimes {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                border: 2px solid rgb(0, 110, 255);
+                border-radius: 5px;
+                margin: 2px 2px 0px 2px;
+                padding: 2px 5px;
+                width: 110px;
+                transition: 0.5s;
+
+                span {
+                    font-size: 16px;
+                    font-weight: normal;
+                    color: white;
+                }
+
+                &:hover {
+                    background-color: rgb(75, 152, 253);
+                }
+            }
+        }
+    }
+}
+
+// #films {
+//     .film {
+//         .film-img {}
+
+//         .divForTimes {
+//             a {}
+//         }
+//     }
+// }

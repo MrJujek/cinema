@@ -16,28 +16,28 @@ fetch('times.php')
                     let divWithFilm = document.createElement("div")
                     let img = document.createElement("img")
                     let divForTimes = document.createElement("div")
+                    divForTimes.classList.add("divForTimes")
 
                     img.classList.add("film-img")
                     img.src = "./img/films/" + data[i].img
+
+                    divWithFilm.innerHTML = "<p>" + data[i].title + "</p>"
 
                     divWithFilm.appendChild(img)
 
                     for (let z = 0; z < seanse.length; z++) {
                         if (seanse[z].id_film == data[i].id_film) {
-                            let filmTime = document.createElement("div")
-
                             let a = document.createElement("a")
 
-                            filmTime.classList.add("film-time")
-                            filmTime.innerHTML = seanse[z].hour + " " + seanse[z].date
+                            a.innerHTML = "<span>" + seanse[z].hour + "</span><span>" + seanse[z].date + "</span>"
                             a.href = "seats.php?id=" + seanse[z].id
 
-                            a.appendChild(filmTime)
-                            divWithFilm.appendChild(a)
+                            divForTimes.appendChild(a)
                         }
                     }
 
                     divWithFilm.classList.add("film")
+                    divWithFilm.appendChild(divForTimes)
 
                     document.getElementById("films").appendChild(divWithFilm)
                 }

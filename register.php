@@ -51,10 +51,15 @@
                 <label>Phone Number:</label>
                 <input type="text" name="phone" min="9" max="9" required  />
                     
-                <input type="submit" value="Sign in"></input>
+                <input type="submit" value="Sign up"></input>
             </form>
             OR
-            <a href="login.php">Login</a>
+            <a href="login.php">Sign in</a>
         </div>
+    </div>
+    
+    <div class="footer">
+        <span>Julian Dworzycki</span>
+        <span>© Cinema 2022</span>
     </div>
 </body>

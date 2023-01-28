@@ -3,6 +3,13 @@ session_start();
 if (!isset($_SESSION['logged'])) {
     $_SESSION['logged'] = false;
     $_SESSION['userID'] = "";
+} else {
+    if (!$_SESSION['logged']) {
+        $_SESSION['logged'] = false;
+        $_SESSION['userID'] = "";
+    } else {
+        $_SESSION['logged'] = true;
+    }
 }
 ?>
 <head>
@@ -22,12 +29,14 @@ if (!isset($_SESSION['logged'])) {
     <div class="bottom-panel">
         <div class="index">
         <?php
-        if ($_SESSION["logged"] == false) {
-            echo '<a href="login.php">Sign in</a>';
-            echo 'OR';
-            echo '<a href="register.php">Sign up</a>';
-        }
-        ?>
+            if ($_SESSION["logged"] == false) {
+                echo '<a href="login.php">Sign in</a>';
+                echo 'OR';
+                echo '<a href="register.php">Sign up</a>';
+            } else {
+                echo '<a href="cinema.php" class="gotofilms">Go to films</a>';
+            }
+        ?>        
         </div>
     </div>
     <div class="footer">

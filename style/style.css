@@ -124,10 +124,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   color: white;
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
@@ -140,6 +136,12 @@
 
 .index a:hover {
   background-color: #4b98fd;
+}
+
+.index .gotofilms {
+  width: 140px;
+  height: 60px;
+  padding: 10px;
 }
 
 .signup,

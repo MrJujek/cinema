@@ -106,4 +106,91 @@
 .bottom-panel a:hover {
   background-color: #4b98fd;
 }
+
+.signup,
+.signin {
+  font-family: 'Noto Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+}
+
+.signup form,
+.signin form {
+  color: #006eff;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #4b98fd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.signup form label,
+.signin form label {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  color: white;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.signup form input[type="text"],
+.signup form input[type="password"],
+.signin form input[type="text"],
+.signin form input[type="password"] {
+  border: 2px solid #006eff;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0px 5px;
+  width: 200px;
+}
+
+.signup form input[type="submit"],
+.signin form input[type="submit"] {
+  height: 50px;
+  width: 100px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: darkgray;
+  border: 2px solid #006eff;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.signup form input[type="submit"]:hover,
+.signin form input[type="submit"]:hover {
+  background-color: #4b98fd;
+}
 /*# sourceMappingURL=style.css.map */

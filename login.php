@@ -43,15 +43,16 @@
     ?>
     <div class="signin">
         <form method="POST">
+            Sign in
             <label>Login:</label>
             <input type="text" name="login" required />
             
             <label>Password:</label>
             <input type="password" name="pass" required />
 
-            <button type="submit">Login</button>
+            <input type="submit" value="Log in"></input>
         </form>
-
+        OR
         <a href="register.php">Sign up</a>
     </div>
 </div>

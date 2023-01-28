@@ -159,3 +159,13 @@
         }
     }
 }
+
+#films {
+    display: flex;
+    flex-direction: row;
+
+    .film-img {
+        width: 200px;
+        height: 290px;
+    }
+}

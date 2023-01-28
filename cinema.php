@@ -6,10 +6,14 @@
 
 <body>
     <div class="top-panel">
-        <a href="index.php"><img src="img/cinema.jpg">Cinema</a>
-        <a href="logout.php" class="logout"><img src="img/logout.png">Log out</a>
+        <a href="index.php"><img src="./img/cinema.jpg">Cinema</a>
+        <a href="logout.php" class="logout"><img src="./img/logout.png">Log out</a>
     </div>
-    <div class="bottom-panel"></div>
+    <div class="bottom-panel">
+        Films
+        <div id="films"></div>
+    </div>
+    <script src="./js/cinema.js"></script>
     
     <?php
     session_start();

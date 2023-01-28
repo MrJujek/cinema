@@ -5,57 +5,57 @@
 </head>
 
 <body>
-    <div class="top-panel"><a href="index.php"><img src="img/cinema.jpg">Cinema</a></div>
+    <div class="top-panel"><a href="index.php"><img src="./img/cinema.jpg">Cinema</a></div>
     <div class="bottom-panel">
-    <?php
-    include "./database/DatabaseData.php";
-    $conn = new mysqli($servername, $username, $password, $database);
+        <?php
+        include "./database/DatabaseData.php";
+        $conn = new mysqli($servername, $username, $password, $database);
 
-    if ($conn->connect_errno) die('Brak połączenia z MySQL');
-    if (isset($_POST['login'], $_POST['pass'])) {
-        $login = $_POST['login'];
-        $pass = $_POST['pass'];
-        $sql = "SELECT * FROM `users` WHERE login='$login' ";
-        
-        $res = $conn->query($sql);
-        if ($res==null){
-            header("Location: login.php");
-        }
-        $response = array();
-        while ($row = mysqli_fetch_assoc($res)) {
-            $response[] = $row;
-        }
-        var_dump($response);
-        if (password_verify($pass, $response[0]['password'])&& $login==$response[0]['login']) {
-            session_start();
-
-            $_SESSION['login'] = $_POST['login'];
-
-            $_SESSION['id'] = $response[0]['id'];
-            header("Location: cinema.php");
-        }else{
-            echo ("Wrong password or login");
-            header("Location: login.php");
-        }
-
-        $conn->close();
-    };
-    ?>
-    <div class="signin">
-        <form method="POST">
-            Sign in
-            <label>Login:</label>
-            <input type="text" name="login" required />
+        if ($conn->connect_errno) die('Brak połączenia z MySQL');
+        if (isset($_POST['login'], $_POST['pass'])) {
+            $login = $_POST['login'];
+            $pass = $_POST['pass'];
+            $sql = "SELECT * FROM `users` WHERE login='$login' ";
             
-            <label>Password:</label>
-            <input type="password" name="pass" required />
+            $res = $conn->query($sql);
+            if ($res==null){
+                header("Location: login.php");
+            }
+            $response = array();
+            while ($row = mysqli_fetch_assoc($res)) {
+                $response[] = $row;
+            }
+            var_dump($response);
+            if (password_verify($pass, $response[0]['password'])&& $login==$response[0]['login']) {
+                session_start();
 
-            <input type="submit" value="Log in"></input>
-        </form>
-        OR
-        <a href="register.php">Sign up</a>
+                $_SESSION['login'] = $_POST['login'];
+
+                $_SESSION['id'] = $response[0]['id'];
+                header("Location: cinema.php");
+            }else{
+                echo ("Wrong password or login");
+                header("Location: login.php");
+            }
+
+            $conn->close();
+        };?>
+
+        <div class="signin">
+            <form method="POST">
+                Sign in
+                <label>Login:</label>
+                <input type="text" name="login" required />
+                
+                <label>Password:</label>
+                <input type="password" name="pass" required />
+
+                <input type="submit" value="Log in"></input>
+            </form>
+            OR
+            <a href="register.php">Sign up</a>
+        </div>
     </div>
-</div>
 </body>
 
 </html>

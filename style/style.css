@@ -226,4 +226,19 @@
 .signin form input[type="submit"]:hover {
   background-color: #4b98fd;
 }
+
+#films {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#films .film-img {
+  width: 200px;
+  height: 290px;
+}
 /*# sourceMappingURL=style.css.map */

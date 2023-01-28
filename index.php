@@ -24,6 +24,7 @@ if (!isset($_SESSION['logged'])) {
         <?php
         if ($_SESSION["logged"] == false) {
             echo '<a href="login.php">Sign in</a>';
+            echo 'OR';
             echo '<a href="register.php">Sign up</a>';
         }
         ?>

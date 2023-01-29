@@ -360,6 +360,52 @@
   background-color: #4b98fd;
 }
 
+#options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#options a {
+  border: 2px solid #006eff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#options a:hover {
+  background-color: #4b98fd;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -450,6 +496,29 @@
   height: 30px;
   border-radius: 0px;
   margin: 0px;
+}
+
+.top-panel .adminpanel {
+  position: absolute;
+  left: 5;
+  top: 0;
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 80px;
+  width: 80px;
 }
 
 .bottom-panel {

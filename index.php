@@ -19,6 +19,11 @@ if (!isset($_SESSION['logged'])) {
 </head>
 <body>
     <div class="top-panel">
+        <?php
+        if ($_SESSION["login"] == "admin") {
+            echo '<a href="adminpanel.php" class="adminpanel">ADMIN PANEL</a>';
+        }
+        ?>
         <a href="index.php"><img src="img/cinema.jpg">Cinema</a>
         <?php
         if ($_SESSION["logged"] == true) {
@@ -43,4 +48,9 @@ if (!isset($_SESSION['logged'])) {
         <span>Julian Dworzycki</span>
         <span>© Cinema 2022</span>
     </div>
+    <?php
+        echo '<pre>';
+        var_dump($_SESSION);
+        echo '</pre>';
+    ?>
 </body>

@@ -3,6 +3,7 @@
 @import 'modules/index';
 @import 'modules/sign';
 @import 'modules/seats';
+@import 'modules/adminpanel';
 
 * {
     margin: 0;
@@ -66,6 +67,23 @@
             border-radius: 0px;
             margin: 0px;
         }
+    }
+
+    .adminpanel {
+        position: absolute;
+        left: 5;
+        top: 0;
+        color: white;
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 20px;
+        font-weight: normal;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 80px;
+        width: 80px;
     }
 }
 

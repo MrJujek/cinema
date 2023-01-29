@@ -14,6 +14,11 @@
     ?>
 
     <div class="top-panel">
+        <?php
+        if ($_SESSION["login"] == "admin") {
+            echo '<a href="adminpanel.php" class="adminpanel">ADMIN PANEL</a>';
+        }
+        ?>
         <a href="index.php"><img src="./img/cinema.jpg">Cinema</a>
         <a href="logout.php" class="logout"><img src="./img/logout.png">Log out</a>
     </div>

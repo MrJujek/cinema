@@ -20,7 +20,7 @@
     <div class="bottom-panel">
         Options
         <div id="options">
-            <a href="addnewtime.php">Add new seance</a>
+            <a href="addnewseance.php">Add new seance</a>
             <a href="addnewfilm.php">Add new film</a>
             <a href="deleteseance.php">Delete seance</a>
             <a href="deletefilm.php">Delete film</a>

@@ -26,3 +26,68 @@
         }
     }
 }
+
+.addnewseance {
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+
+    form {
+        color: rgb(0, 110, 255);
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 30px;
+        font-weight: bold;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgb(75, 152, 253);
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        label {
+            margin-top: 5px;
+            margin-bottom: 2px;
+            color: white;
+            font-weight: normal;
+            font-size: 24px;
+        }
+
+        select,
+        input[type="date"],
+        input[type="time"] {
+            border: 2px solid rgb(0, 110, 255);
+            height: 35px;
+            border-radius: 5px;
+            padding: 0px 5px;
+            width: 200px;
+        }
+
+        input[type="submit"] {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: darkgray;
+            border: 2px solid rgb(0, 110, 255);
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: 0.5s;
+            padding: 10px;
+
+            &:hover {
+                background-color: rgb(75, 152, 253);
+            }
+        }
+    }
+}

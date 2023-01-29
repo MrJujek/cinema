@@ -73,7 +73,7 @@
   text-decoration: none;
   border: 2px solid #006eff;
   border-radius: 5px;
-  margin: 2px 2px 0px 2px;
+  margin: 5px;
   padding: 2px 5px;
   width: 110px;
   -webkit-transition: 0.5s;
@@ -403,6 +403,89 @@
 }
 
 #options a:hover {
+  background-color: #4b98fd;
+}
+
+.addnewseance {
+  font-family: 'Noto Sans', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  font-size: 20px;
+}
+
+.addnewseance form {
+  color: #006eff;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #4b98fd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.addnewseance form label {
+  margin-top: 5px;
+  margin-bottom: 2px;
+  color: white;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.addnewseance form select,
+.addnewseance form input[type="date"],
+.addnewseance form input[type="time"] {
+  border: 2px solid #006eff;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0px 5px;
+  width: 200px;
+}
+
+.addnewseance form input[type="submit"] {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: darkgray;
+  border: 2px solid #006eff;
+  border-radius: 5px;
+  margin-top: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 10px;
+}
+
+.addnewseance form input[type="submit"]:hover {
   background-color: #4b98fd;
 }
 

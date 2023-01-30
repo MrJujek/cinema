@@ -59,7 +59,7 @@
     
     <div class="footer">
         <span>Julian Dworzycki</span>
-        <span>© Cinema 2022</span>
+        <span>© Cinema 2023</span>
     </div>
 </body>
 

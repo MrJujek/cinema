@@ -406,6 +406,7 @@
   background-color: #4b98fd;
 }
 
+.addnewfilm,
 .addnewimage,
 .addnewseance {
   font-family: 'Noto Sans', sans-serif;
@@ -426,6 +427,7 @@
   font-size: 20px;
 }
 
+.addnewfilm form,
 .addnewimage form,
 .addnewseance form {
   color: #006eff;
@@ -451,6 +453,7 @@
   margin-bottom: 20px;
 }
 
+.addnewfilm form label,
 .addnewimage form label,
 .addnewseance form label {
   margin-top: 5px;
@@ -460,10 +463,16 @@
   font-size: 24px;
 }
 
+.addnewfilm form select,
+.addnewfilm form input[type="text"],
+.addnewfilm form input[type="date"],
+.addnewfilm form input[type="time"],
 .addnewimage form select,
+.addnewimage form input[type="text"],
 .addnewimage form input[type="date"],
 .addnewimage form input[type="time"],
 .addnewseance form select,
+.addnewseance form input[type="text"],
 .addnewseance form input[type="date"],
 .addnewseance form input[type="time"] {
   border: 2px solid #006eff;
@@ -473,6 +482,7 @@
   width: 200px;
 }
 
+.addnewfilm form input[type="file"],
 .addnewimage form input[type="file"],
 .addnewseance form input[type="file"] {
   font-family: 'Noto Sans', sans-serif;
@@ -485,6 +495,7 @@
   padding: 10px;
 }
 
+.addnewfilm form input[type="submit"],
 .addnewimage form input[type="submit"],
 .addnewseance form input[type="submit"] {
   color: white;
@@ -504,6 +515,7 @@
   padding: 10px;
 }
 
+.addnewfilm form input[type="submit"]:hover,
 .addnewimage form input[type="submit"]:hover,
 .addnewseance form input[type="submit"]:hover {
   background-color: #4b98fd;

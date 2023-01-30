@@ -27,6 +27,7 @@
     }
 }
 
+.addnewimage,
 .addnewseance {
     font-family: 'Noto Sans', sans-serif;
     display: flex;
@@ -67,6 +68,15 @@
             border-radius: 5px;
             padding: 0px 5px;
             width: 200px;
+        }
+
+        input[type="file"] {
+            font-family: 'Noto Sans', sans-serif;
+            color: white;
+            width: fit-content;
+            border: 2px solid rgb(0, 110, 255);
+            border-radius: 5px;
+            padding: 10px;
         }
 
         input[type="submit"] {

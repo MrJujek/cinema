@@ -406,6 +406,7 @@
   background-color: #4b98fd;
 }
 
+.addnewimage,
 .addnewseance {
   font-family: 'Noto Sans', sans-serif;
   display: -webkit-box;
@@ -425,6 +426,7 @@
   font-size: 20px;
 }
 
+.addnewimage form,
 .addnewseance form {
   color: #006eff;
   font-family: 'Noto Sans', sans-serif;
@@ -449,6 +451,7 @@
   margin-bottom: 20px;
 }
 
+.addnewimage form label,
 .addnewseance form label {
   margin-top: 5px;
   margin-bottom: 2px;
@@ -457,6 +460,9 @@
   font-size: 24px;
 }
 
+.addnewimage form select,
+.addnewimage form input[type="date"],
+.addnewimage form input[type="time"],
 .addnewseance form select,
 .addnewseance form input[type="date"],
 .addnewseance form input[type="time"] {
@@ -467,6 +473,19 @@
   width: 200px;
 }
 
+.addnewimage form input[type="file"],
+.addnewseance form input[type="file"] {
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid #006eff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.addnewimage form input[type="submit"],
 .addnewseance form input[type="submit"] {
   color: white;
   text-align: center;
@@ -485,6 +504,7 @@
   padding: 10px;
 }
 
+.addnewimage form input[type="submit"]:hover,
 .addnewseance form input[type="submit"]:hover {
   background-color: #4b98fd;
 }

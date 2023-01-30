@@ -34,7 +34,7 @@
                     header("Location: login.php");
                 }
             }else{
-                echo("Too short login or password or phone number");
+                echo("Incorrect data");
             }
         }?>
         

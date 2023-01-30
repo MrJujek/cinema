@@ -8,8 +8,10 @@ console.log($_GET.id)
 
 function dele() {
     let d = new FormData()
+    console.log("d1: ", d)
     d.append('del', JSON.stringify(del))
-    console.log(d)
+    console.log("d2: ", d)
+    console.log("del: ", del);
     if (del.length > 0) {
         fetch('./del.php', {
             method: 'POST',
@@ -62,7 +64,7 @@ fetch('reserved.php')
 
                         for (let f = 0; f < reserved.length; f++) {
 
-                            if (reserved[f].id == id && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
+                            if ((reserved[f].id == id || id == 5) && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
                                 div.style.backgroundColor = "green"
 
                                 break

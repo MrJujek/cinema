@@ -10,7 +10,11 @@
         $row = $ran[$i]->{'row'};
         $seat = $ran[$i]->{'seat'};
         $id_film = $ran[$i]->{'id_film'};
-        $sql = "DELETE FROM book WHERE id=$id AND row=$row AND seat=$seat AND id_film=$id_film;";
+        if ($id == 5) {
+            $sql = "DELETE FROM book WHERE row=$row AND seat=$seat AND id_film=$id_film;";
+        } else {
+            $sql = "DELETE FROM book WHERE id=$id AND row=$row AND seat=$seat AND id_film=$id_film;";
+        }
         $result = $conn->query($sql);
     }
     $conn->close();

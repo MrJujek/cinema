@@ -33,8 +33,12 @@
                 if (isset($_SESSION['fileuploaded'])) {
                     if ($_SESSION["fileuploaded"] == "true") {
                         echo 'File '.$_SESSION["filename"].' succesfuly uploaded';
+                        unset($_SESSION["filename"]);
+                        unset($_SESSION["fileuploaded"]);
                     } else {
                         echo 'There was an error uploading file';
+                        unset($_SESSION["filename"]);
+                        unset($_SESSION["fileuploaded"]);
                     }
                 }
             ?>

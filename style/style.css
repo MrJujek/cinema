@@ -406,6 +406,7 @@
   background-color: #4b98fd;
 }
 
+.deleteseance,
 .addnewfilm,
 .addnewimage,
 .addnewseance {
@@ -427,6 +428,7 @@
   font-size: 20px;
 }
 
+.deleteseance form,
 .addnewfilm form,
 .addnewimage form,
 .addnewseance form {
@@ -453,6 +455,7 @@
   margin-bottom: 20px;
 }
 
+.deleteseance form label,
 .addnewfilm form label,
 .addnewimage form label,
 .addnewseance form label {
@@ -463,6 +466,10 @@
   font-size: 24px;
 }
 
+.deleteseance form select,
+.deleteseance form input[type="text"],
+.deleteseance form input[type="date"],
+.deleteseance form input[type="time"],
 .addnewfilm form select,
 .addnewfilm form input[type="text"],
 .addnewfilm form input[type="date"],
@@ -482,6 +489,7 @@
   width: 200px;
 }
 
+.deleteseance form input[type="file"],
 .addnewfilm form input[type="file"],
 .addnewimage form input[type="file"],
 .addnewseance form input[type="file"] {
@@ -495,6 +503,7 @@
   padding: 10px;
 }
 
+.deleteseance form input[type="submit"],
 .addnewfilm form input[type="submit"],
 .addnewimage form input[type="submit"],
 .addnewseance form input[type="submit"] {
@@ -515,6 +524,7 @@
   padding: 10px;
 }
 
+.deleteseance form input[type="submit"]:hover,
 .addnewfilm form input[type="submit"]:hover,
 .addnewimage form input[type="submit"]:hover,
 .addnewseance form input[type="submit"]:hover {

@@ -1,9 +1,20 @@
 #seats {
+    padding-top: 20px;
+    border-top: 10px solid black;
+
     .row {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+
+        .rowNumber {
+            width: 30px;
+            color: rgb(0, 110, 255);
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 20px;
+            text-align: right;
+        }
 
         .seat {
             height: 20px;

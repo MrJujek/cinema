@@ -55,6 +55,11 @@ fetch('reserved.php')
                     let row = document.createElement("div")
                     row.classList.add("row")
 
+                    let rowNumber = document.createElement("div")
+                    rowNumber.classList.add("rowNumber")
+                    rowNumber.append(i + 1)
+                    row.appendChild(rowNumber)
+
                     for (var z = 0; z < 20; z++) {
                         let tmp = false
                         let div = document.createElement("div")
@@ -114,6 +119,10 @@ fetch('reserved.php')
                         }
                         row.appendChild(div)
                     }
+                    let rightFill = document.createElement("div")
+                    rightFill.classList.add("rowNumber")
+                    row.appendChild(rightFill)
+
                     document.getElementById("seats").appendChild(row)
                 }
             })

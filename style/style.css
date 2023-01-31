@@ -441,6 +441,43 @@
   font-size: 20px;
 }
 
+.deleteseance a,
+.addnewfilm a,
+.addnewimage a,
+.addnewseance a {
+  border: 2px solid #006eff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.deleteseance a:hover,
+.addnewfilm a:hover,
+.addnewimage a:hover,
+.addnewseance a:hover {
+  background-color: #4b98fd;
+}
+
 .deleteseance form,
 .addnewfilm form,
 .addnewimage form,

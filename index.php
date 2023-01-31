@@ -11,6 +11,7 @@ if (!isset($_SESSION['logged'])) {
         $_SESSION['logged'] = true;
     }
 }
+unset($_SESSION['isfilmselected']);
 ?>
 <head>
     <title>Cinema</title>

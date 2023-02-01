@@ -4,7 +4,6 @@ let id = getIdOfFilm()
 var $_GET = giveGet()
 let id_film = $_GET.id
 let reserved
-console.log($_GET.id)
 
 function dele() {
     let d = new FormData()
@@ -23,6 +22,7 @@ function dele() {
             })
     }
 }
+
 document.getElementById("book").addEventListener("click", function (e) {
     let a = new FormData()
     a.append('choosen', JSON.stringify(choosen))
@@ -38,19 +38,20 @@ document.getElementById("book").addEventListener("click", function (e) {
             })
     }
 })
+
 fetch('reserved.php')
     .then(function (response) {
-
         return response.json()
+
     }).then(function (data) {
         console.log(data)
         reserved = data
+
         fetch('films.php')
             .then(function (response) {
-
                 return response.json()
-            }).then(function (data) {
 
+            }).then(function (data) {
                 for (let i = 0; i < 15; i++) {
                     let row = document.createElement("div")
                     row.classList.add("row")
@@ -60,33 +61,34 @@ fetch('reserved.php')
                     rowNumber.append(i + 1)
                     row.appendChild(rowNumber)
 
-                    for (var z = 0; z < 20; z++) {
+                    for (let z = 0; z < 20; z++) {
                         let tmp = false
                         let div = document.createElement("div")
                         div.setAttribute("row", i)
                         div.setAttribute("seat", z)
                         div.className = "seat"
 
-                        for (let f = 0; f < reserved.length; f++) {
+                        if (reserved) {
+                            for (let f = 0; f < reserved.length; f++) {
 
-                            if ((reserved[f].id == id || id == 5) && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
-                                div.style.backgroundColor = "green"
+                                if ((reserved[f].id == id || id == 5) && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
+                                    div.style.backgroundColor = "green"
 
-                                break
-                            } else if (reserved[f].id != id && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
-                                div.style.backgroundColor = "red"
-                                tmp = true
-                                break
-                            } else {
-                                div.style.backgroundColor = "white"
+                                    break
+                                } else if (reserved[f].id != id && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
+                                    div.style.backgroundColor = "red"
+                                    tmp = true
+                                    break
+                                } else {
+                                    div.style.backgroundColor = "white"
+                                }
                             }
+                        } else {
+                            div.style.backgroundColor = "white"
                         }
 
                         if (tmp == false) {
                             div.addEventListener("click", function (e) {
-
-                                console.log(e.target.style.backgroundColor)
-
                                 if (e.target.style.backgroundColor == "white") {
                                     e.target.style.backgroundColor = "yellow"
                                     choosen.push({
@@ -97,12 +99,10 @@ fetch('reserved.php')
                                     })
                                 } else if (e.target.style.backgroundColor == "yellow") {
                                     e.target.style.backgroundColor = "white"
-                                    for (var i = 0; i < choosen.length; i++) {
+                                    for (let i = 0; i < choosen.length; i++) {
                                         if (choosen[i].row == e.target.getAttribute("row") && choosen[i].seat == e.target.getAttribute("seat")) {
                                             choosen.splice(i, 1)
                                         }
-
-
                                     }
                                 } else if (e.target.style.backgroundColor == "green") {
                                     del.push({
@@ -113,12 +113,11 @@ fetch('reserved.php')
                                     })
                                     dele()
                                 }
-
-                                console.log(choosen)
                             })
                         }
                         row.appendChild(div)
                     }
+
                     let rightFill = document.createElement("div")
                     rightFill.classList.add("rowNumber")
                     row.appendChild(rightFill)

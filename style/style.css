@@ -411,7 +411,7 @@
   font-weight: bold;
   text-decoration: none;
   margin: 10px;
-  padding: 20px;
+  padding: 15px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -420,6 +420,7 @@
   background-color: #4b98fd;
 }
 
+.deletereservation,
 .deletefilmimage,
 .deleteseance,
 .addnewfilm,
@@ -443,6 +444,7 @@
   font-size: 20px;
 }
 
+.deletereservation a,
 .deletefilmimage a,
 .deleteseance a,
 .addnewfilm a,
@@ -474,6 +476,7 @@
   transition: 0.5s;
 }
 
+.deletereservation a:hover,
 .deletefilmimage a:hover,
 .deleteseance a:hover,
 .addnewfilm a:hover,
@@ -482,6 +485,7 @@
   background-color: #4b98fd;
 }
 
+.deletereservation form,
 .deletefilmimage form,
 .deleteseance form,
 .addnewfilm form,
@@ -510,6 +514,7 @@
   margin-bottom: 20px;
 }
 
+.deletereservation form label,
 .deletefilmimage form label,
 .deleteseance form label,
 .addnewfilm form label,
@@ -522,6 +527,10 @@
   font-size: 24px;
 }
 
+.deletereservation form select,
+.deletereservation form input[type="text"],
+.deletereservation form input[type="date"],
+.deletereservation form input[type="time"],
 .deletefilmimage form select,
 .deletefilmimage form input[type="text"],
 .deletefilmimage form input[type="date"],
@@ -549,6 +558,7 @@
   width: 200px;
 }
 
+.deletereservation form input[type="file"],
 .deletefilmimage form input[type="file"],
 .deleteseance form input[type="file"],
 .addnewfilm form input[type="file"],
@@ -564,6 +574,7 @@
   padding: 10px;
 }
 
+.deletereservation form input[type="submit"],
 .deletefilmimage form input[type="submit"],
 .deleteseance form input[type="submit"],
 .addnewfilm form input[type="submit"],
@@ -586,6 +597,7 @@
   padding: 10px;
 }
 
+.deletereservation form input[type="submit"]:hover,
 .deletefilmimage form input[type="submit"]:hover,
 .deleteseance form input[type="submit"]:hover,
 .addnewfilm form input[type="submit"]:hover,
@@ -601,6 +613,7 @@
           box-sizing: border-box;
 }
 
+header,
 .top-panel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -619,6 +632,7 @@
   padding: 10px;
 }
 
+header a,
 .top-panel a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -642,10 +656,12 @@
   transition: 0.5s;
 }
 
+header a:hover,
 .top-panel a:hover {
   color: #006eff;
 }
 
+header a img,
 .top-panel a img {
   width: 60px;
   height: 60px;
@@ -653,10 +669,11 @@
   border-radius: 20px;
 }
 
+header .logout,
 .top-panel .logout {
   position: absolute;
-  right: 5;
-  top: 0;
+  right: 5px;
+  top: 0px;
   color: white;
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
@@ -679,6 +696,7 @@
   width: 80px;
 }
 
+header .logout img,
 .top-panel .logout img {
   width: 30px;
   height: 30px;
@@ -686,10 +704,11 @@
   margin: 0px;
 }
 
+header .adminpanel,
 .top-panel .adminpanel {
   position: absolute;
-  left: 5;
-  top: 0;
+  left: 5px;
+  top: 0px;
   color: white;
   font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
@@ -709,6 +728,7 @@
   width: 80px;
 }
 
+main,
 .bottom-panel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -731,6 +751,7 @@
   font-size: 30px;
 }
 
+footer,
 .footer {
   height: 40px;
   background-color: gray;

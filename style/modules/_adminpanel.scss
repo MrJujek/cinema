@@ -1,4 +1,5 @@
 #options {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18,7 +19,7 @@
         font-weight: bold;
         text-decoration: none;
         margin: 10px;
-        padding: 10px;
+        padding: 20px;
         transition: 0.5s;
 
         &:hover {
@@ -27,6 +28,7 @@
     }
 }
 
+.deletefilmimage,
 .deleteseance,
 .addnewfilm,
 .addnewimage,

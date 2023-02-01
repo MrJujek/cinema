@@ -374,6 +374,7 @@
 }
 
 #options {
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,7 +411,7 @@
   font-weight: bold;
   text-decoration: none;
   margin: 10px;
-  padding: 10px;
+  padding: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -419,6 +420,7 @@
   background-color: #4b98fd;
 }
 
+.deletefilmimage,
 .deleteseance,
 .addnewfilm,
 .addnewimage,
@@ -441,6 +443,7 @@
   font-size: 20px;
 }
 
+.deletefilmimage a,
 .deleteseance a,
 .addnewfilm a,
 .addnewimage a,
@@ -471,6 +474,7 @@
   transition: 0.5s;
 }
 
+.deletefilmimage a:hover,
 .deleteseance a:hover,
 .addnewfilm a:hover,
 .addnewimage a:hover,
@@ -478,6 +482,7 @@
   background-color: #4b98fd;
 }
 
+.deletefilmimage form,
 .deleteseance form,
 .addnewfilm form,
 .addnewimage form,
@@ -505,6 +510,7 @@
   margin-bottom: 20px;
 }
 
+.deletefilmimage form label,
 .deleteseance form label,
 .addnewfilm form label,
 .addnewimage form label,
@@ -516,6 +522,10 @@
   font-size: 24px;
 }
 
+.deletefilmimage form select,
+.deletefilmimage form input[type="text"],
+.deletefilmimage form input[type="date"],
+.deletefilmimage form input[type="time"],
 .deleteseance form select,
 .deleteseance form input[type="text"],
 .deleteseance form input[type="date"],
@@ -539,6 +549,7 @@
   width: 200px;
 }
 
+.deletefilmimage form input[type="file"],
 .deleteseance form input[type="file"],
 .addnewfilm form input[type="file"],
 .addnewimage form input[type="file"],
@@ -553,6 +564,7 @@
   padding: 10px;
 }
 
+.deletefilmimage form input[type="submit"],
 .deleteseance form input[type="submit"],
 .addnewfilm form input[type="submit"],
 .addnewimage form input[type="submit"],
@@ -574,6 +586,7 @@
   padding: 10px;
 }
 
+.deletefilmimage form input[type="submit"]:hover,
 .deleteseance form input[type="submit"]:hover,
 .addnewfilm form input[type="submit"]:hover,
 .addnewimage form input[type="submit"]:hover,

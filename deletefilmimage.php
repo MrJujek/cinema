@@ -1,8 +1,5 @@
 <?php
     session_start();
-    unset($_SESSION['isfilmselected']);
-    unset($_SESSION['film']);
-    unset($_SESSION['deleteseanceinfo']);
 ?>
 <head>
     <title>Cinema</title>
@@ -21,14 +18,34 @@
         <a href="logout.php" class="logout"><img src="./img/logout.png">Log out</a>
     </div>
     <div class="bottom-panel">
-        Options
-        <div id="options">
-            <a href="addnewseance.php">Add new seance</a>
-            <a href="addnewfilm.php">Add new film</a>
-            <a href="deleteseance.php">Delete seance</a>
-            <a href="deletefilm.php">Delete film</a>
-            <a href="addfilmimage.php">Add film image</a>
-            <a href="deletefilmimage.php">Delete film image</a>
+        Delete film image
+
+        <div class="deletefilmimage">
+            <form method="POST">
+                <label for="selectimage">Choose image:</label>
+                <select name="selectimage" id="selectimage">
+                <?php
+                    $images = scandir('./img/films');
+                    for ($i = 2; $i < count($images); $i++) {
+                        echo '<option value="'.$images[$i].'">'.$images[$i].'</option>';
+                    }
+                ?>
+                </select>
+
+                <input type="submit" value="Delete"></input>
+            </form>
+
+            <?php
+                if (isset($_POST['selectimage'])) {
+                    $selectimage = $_POST['selectimage'];
+
+                    if (unlink('img/films/'.$selectimage)) {
+                        echo 'The file ' . $selectimage . ' was deleted successfully!';
+                    } else {
+                        echo 'There was a error deleting the file ' . $selectimage;
+                    }
+                }
+            ?>
         </div>
     </div>
     <div class="footer">

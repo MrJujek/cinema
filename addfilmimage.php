@@ -22,7 +22,7 @@
         Add new image
 
         <div class="addnewimage">
-            <form method="POST" action="uploadfile.php" enctype="multipart/form-data">
+            <form method="POST" action="upload_file.php" enctype="multipart/form-data">
                 <label for="addnewimage">Upload file:</label>
                 <input type="file" name="addnewimage" id="addnewimage">
                 

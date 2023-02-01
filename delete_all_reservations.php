@@ -54,7 +54,7 @@
                 <input type="submit" value="Delete reservation"></input>
             </form>
             OR
-            <a href="delete_reservations.php?all=true">Delete all reservations</a>
+            <a href="delete_all_reservations.php?all=true">Delete all reservations</a>
 
             <?php
                 if (isset($_SESSION["deleted"])) {
@@ -78,10 +78,10 @@
                     
                     if ($res==null){
                         $_SESSION["deleted"] = false;
-                        header("Location: delete_reservations.php");
+                        header("Location: delete_all_reservations.php");
                     } else {
                         $_SESSION["deleted"] = true;
-                        header("Location: delete_reservations.php");
+                        header("Location: delete_all_reservations.php");
                     }
                     $conn->close();
                 }
@@ -101,10 +101,10 @@
                     
                     if ($res==null){
                         $_SESSION["deleted"] = false;
-                        header("Location: delete_reservations.php");
+                        header("Location: delete_all_reservations.php");
                     } else {
                         $_SESSION["deleted"] = true;
-                        header("Location: delete_reservations.php");
+                        header("Location: delete_all_reservations.php");
                     }
                     $conn->close();
                 }

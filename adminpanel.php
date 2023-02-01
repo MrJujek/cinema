@@ -29,7 +29,7 @@
             <a href="deletefilm.php">Delete film</a>
             <a href="addfilmimage.php">Add film image</a>
             <a href="deletefilmimage.php">Delete film image</a>
-            <a href="delete_reservations.php">Delete reservations</a>
+            <a href="delete_all_reservations.php">Delete reservations</a>
             <a href="cinema.php" class="gotofilms">Check films</a>
         </div>
     </div>

@@ -12,7 +12,7 @@ function dele() {
     console.log("d2: ", d)
     console.log("del: ", del);
     if (del.length > 0) {
-        fetch('./del.php', {
+        fetch('./delete_reservation.php', {
             method: 'POST',
             body: d,
         })
@@ -39,7 +39,7 @@ document.getElementById("book").addEventListener("click", function (e) {
     }
 })
 
-fetch('reserved.php')
+fetch('get_reservations.php')
     .then(function (response) {
         return response.json()
 

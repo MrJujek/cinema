@@ -1,12 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema</title>
     <link rel="stylesheet" href="/style/style.css">
     <link rel="icon" href="img/cinema.jpg">
 </head>
 
 <body>
-    <div class="top-panel"><a href="index.php"><img src="./img/cinema.jpg">Cinema</a></div>
-    <div class="bottom-panel">
+    <header>
+        <a href="index.php"><img src="./img/cinema.jpg">Cinema</a>
+    </header>
+
+    <main>
         <?php
         include "./database/DatabaseData.php";
         $conn = new mysqli($servername, $username, $password, $database);
@@ -31,7 +39,7 @@
                     echo("Login already exists");
                 }else{
                     $conn->query("INSERT INTO users (login, password, phone) VALUES ('$login', '$password', $phone)") or die('Nie można zapisać rekordu');
-                    header("Location: login.php");
+                    header("Location: sign_in.php");
                 }
             }else{
                 echo("Incorrect data");
@@ -54,12 +62,13 @@
                 <input type="submit" value="Sign up"></input>
             </form>
             OR
-            <a href="login.php">Sign in</a>
+            <a href="sign_in.php">Sign in</a>
         </div>
-    </div>
+    </main>
     
-    <div class="footer">
+    <footer>
         <span>Julian Dworzycki</span>
         <span>© Cinema 2023</span>
-    </div>
+    </footer>
 </body>
+</html>

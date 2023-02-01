@@ -2,16 +2,16 @@
 session_start();
 if (!isset($_SESSION['logged'])) {
     $_SESSION['logged'] = false;
-    $_SESSION['userID'] = "";
 } else {
     if (!$_SESSION['logged']) {
         $_SESSION['logged'] = false;
-        $_SESSION['userID'] = "";
     } else {
         $_SESSION['logged'] = true;
     }
 }
 unset($_SESSION['isfilmselected']);
+unset($_SESSION['film']);
+unset($_SESSION['deleteseanceinfo']);
 ?>
 <head>
     <title>Cinema</title>

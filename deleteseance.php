@@ -23,11 +23,17 @@
         <div class="deleteseance">
             <form method="POST" action="deleteseance.php">
             <?php
+                if (isset($_GET['other'])) {
+                    unset($_SESSION['isfilmselected']);
+                    unset($_SESSION['film']);
+                }
+
                 if (!isset($_SESSION['isfilmselected'])) {
                     $_SESSION['isfilmselected'] = false;
-                    $_SESSION['showseances'] = false;
-                } else {
-                    $_SESSION['showseances'] = false;
+                } 
+
+                if (isset($_POST['selectfilm'])) {
+                    $_SESSION['isfilmselected'] = true;
                 }
 
                 if ($_SESSION['isfilmselected'] == false) {
@@ -55,10 +61,13 @@
                 }
             ?>
             <?php
-                if ($_SESSION['isfilmselected'] == true) {
-                    echo '<input type="submit" value="Next"></input>';
-                } else {
+                if ($_SESSION['isfilmselected'] == true) {  
                     echo $_POST['selectfilm'];
+                    if (!isset($_SESSION['film'])) {
+                        $_SESSION['film'] = $_POST['selectfilm'];
+                    }
+                    //echo $_SESSION['film'];
+
                     include "./database/DatabaseData.php";
                     $conn = new mysqli($servername, $username, $password, $database);
                     if ($conn->connect_errno) die('Brak połączenia z MySQL');
@@ -83,23 +92,46 @@
                     echo "</select>";
 
                     echo '<input type="submit" value="Delete seance"></input>';
+                } else {
+                    echo '<input type="submit" value="Next"></input>';
                 }
             ?>
             </form>
-            <script>
-                function unsetDeleteseancesSessions () {
-                    <?php 
-                        unset($_SESSION['isfilmselected']);
-                        unset($_SESSION['showseances']);    
-                    ?>
-                }
-            </script>
+
             <?php
-                var_dump($_POST);
                 if (isset($_POST['selectfilm'])) {
                     $_SESSION['isfilmselected'] = true;
                     echo "OR";
-                    echo '<a href="deleteseance.php" onclick=unsetDeleteseancesSessions()>Choose other film</a>';
+                    echo '<a href="deleteseance.php?other=true"">Choose other film</a>';
+                }
+            ?>
+
+            <?php
+                if (isset($_SESSION['deleteseanceinfo'])) {
+                    echo $_SESSION['deleteseanceinfo'];
+                    unset($_SESSION['deleteseanceinfo']);
+                }
+            ?>
+
+            <?php
+                if (isset($_POST['selectseance'])) {
+                    $date = explode("|", $_POST['selectseance'])[0];
+                    $hour = explode("|", $_POST['selectseance'])[1];
+
+                    include "./database/DatabaseData.php";
+                    $conn = new mysqli($servername, $username, $password, $database);
+                    if ($conn->connect_errno) die('Brak połączenia z MySQL');
+
+                    $sql = "DELETE FROM `seanse` WHERE date = '".$date."' AND hour = '".$hour."' AND id_film = (SELECT id_film FROM `films` WHERE title = '".$_SESSION['film']."')";
+                    $res = $conn->query($sql);
+                    echo $sql;
+                    $conn->close();
+
+                    unset($_SESSION['isfilmselected']);
+                    $_SESSION['deleteseanceinfo'] = "Seance deleted";
+                    unset($_SESSION['film']);
+
+                    header("Location: deleteseance.php");
                 }
             ?>
         </div>
@@ -125,8 +157,13 @@
     }
     ?>
     <?php
+        echo 'SESSION';
         echo '<pre>';
         var_dump($_SESSION);
+        echo '</pre>';
+        echo 'POST';
+        echo '<pre>';
+        var_dump($_POST);
         echo '</pre>';
     ?>
 </body>

@@ -1,6 +1,8 @@
 <?php
     session_start();
     unset($_SESSION['isfilmselected']);
+    unset($_SESSION['film']);
+    unset($_SESSION['deleteseanceinfo']);
 ?>
 <head>
     <title>Cinema</title>

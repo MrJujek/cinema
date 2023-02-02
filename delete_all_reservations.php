@@ -10,14 +10,12 @@
 </head>
 
 <body>
-    <?php
-        session_start();
-    ?>
     <header>
         <?php
-        if ($_SESSION["login"] == "admin") {
-            echo '<a href="adminpanel.php" class="adminpanel">ADMIN PANEL</a>';
-        }
+            session_start();
+            if ($_SESSION["login"] == "admin") {
+                echo '<a href="adminpanel.php" class="adminpanel">ADMIN PANEL</a>';
+            }
         ?>
         <a href="index.php"><img src="./img/cinema.jpg">Cinema</a>
         <a href="logout.php" class="logout"><img src="./img/logout.png">Log out</a>
@@ -118,19 +116,18 @@
     </footer>
     
     <?php
-    session_start();
-    if (!isset($_SESSION["login"])) {
-        header("Location: login.php");
-        $_SESSION["logged"] = false;
-        exit();
-    } else {
-        if ($_SESSION["login"] != "admin") {
-            header("Location: index.php");
+        if (!isset($_SESSION["login"])) {
+            header("Location: login.php");
+            $_SESSION["logged"] = false;
             exit();
         } else {
-            $_SESSION["logged"] = true;
+            if ($_SESSION["login"] != "admin") {
+                header("Location: index.php");
+                exit();
+            } else {
+                $_SESSION["logged"] = true;
+            }
         }
-    }
     ?>
 </body>
 

@@ -66,7 +66,7 @@ fetch('get_reservations.php')
                         if (reserved) {
                             for (let f = 0; f < reserved.length; f++) {
 
-                                if ((reserved[f].id == id || id == 5) && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
+                                if ((reserved[f].id == id || id == 1) && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
                                     div.style.backgroundColor = "green"
                                     break
                                 } else if (reserved[f].id != id && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {

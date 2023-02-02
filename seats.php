@@ -50,12 +50,7 @@
         }
 
         function getIdOfFilm() {
-            return <?php
-                session_start();
-                $json = $_SESSION['id'];
-                $jsonstring = json_encode($json);
-                echo $jsonstring;
-            ?>
+            return <?php echo json_encode($_SESSION['id']); ?>;
         }
     </script>
 

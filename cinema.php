@@ -10,12 +10,9 @@
 </head>
 
 <body>
-    <?php
-        session_start();
-    ?>
-    
     <header>
         <?php
+            session_start();
             if ($_SESSION["login"] == "admin") {
                 echo '<a href="adminpanel.php" class="adminpanel">ADMIN PANEL</a>';
             }
@@ -37,7 +34,6 @@
     <script src="./js/cinema.js"></script>
     
     <?php
-        session_start();
         if (!isset($_SESSION["login"])) {
             header("Location: login.php");
             $_SESSION["logged"] = false;

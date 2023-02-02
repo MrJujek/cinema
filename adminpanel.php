@@ -13,9 +13,9 @@
 <body>
     <div class="top-panel">
         <?php
-        if ($_SESSION["login"] == "admin") {
-            echo '<a href="adminpanel.php" class="adminpanel">ADMIN PANEL</a>';
-        }
+            if ($_SESSION["login"] == "admin") {
+                echo '<a href="adminpanel.php" class="adminpanel">ADMIN PANEL</a>';
+            }
         ?>
         <a href="index.php"><img src="./img/cinema.jpg">Cinema</a>
         <a href="logout.php" class="logout"><img src="./img/logout.png">Log out</a>
@@ -39,7 +39,6 @@
     </div>
     
     <?php
-        session_start();
         if (!isset($_SESSION["login"])) {
             header("Location: login.php");
             $_SESSION["logged"] = false;

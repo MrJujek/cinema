@@ -3,8 +3,8 @@
 ?>
 <head>
     <title>Cinema</title>
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="icon" href="img/cinema.jpg">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./img/cinema.jpg">
 </head>
 
 <body>
@@ -67,24 +67,19 @@
     </div>
     
     <?php
-    session_start();
-    if (!isset($_SESSION["login"])) {
-        header("Location: login.php");
-        $_SESSION["logged"] = false;
-        exit();
-    } else {
-        if ($_SESSION["login"] != "admin") {
-            header("Location: index.php");
+        session_start();
+        if (!isset($_SESSION["login"])) {
+            header("Location: login.php");
+            $_SESSION["logged"] = false;
             exit();
         } else {
-            $_SESSION["logged"] = true;
+            if ($_SESSION["login"] != "admin") {
+                header("Location: index.php");
+                exit();
+            } else {
+                $_SESSION["logged"] = true;
+            }
         }
-    }
-    ?>
-    <?php
-        echo '<pre>';
-        var_dump($_SESSION);
-        echo '</pre>';
     ?>
 </body>
 

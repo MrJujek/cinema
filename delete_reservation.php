@@ -3,7 +3,7 @@
     $conn = new mysqli($servername, $username, $password, $database);
     if ($conn->connect_errno) die('Brak połączenia z MySQL');
     
-    $ran = json_decode($_POST['del']);
+    $ran = json_decode($_POST['toDelete']);
 
     for ($i = 0; $i < sizeof($ran); $i++) {
         $id = $ran[$i]->{'id'};

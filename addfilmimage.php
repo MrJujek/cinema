@@ -3,8 +3,8 @@
 ?>
 <head>
     <title>Cinema</title>
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="icon" href="img/cinema.jpg">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./img/cinema.jpg">
 </head>
 
 <body>
@@ -64,11 +64,6 @@
             $_SESSION["logged"] = true;
         }
     }
-    ?>
-    <?php
-        echo '<pre>';
-        var_dump($_SESSION);
-        echo '</pre>';
     ?>
 </body>
 

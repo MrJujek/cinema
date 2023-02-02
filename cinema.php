@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinema</title>
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="icon" href="img/cinema.jpg">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="./img/cinema.jpg">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
     <script src="./js/cinema.js"></script>
     
     <?php
-    session_start();
+        session_start();
         if (!isset($_SESSION["login"])) {
             header("Location: login.php");
             $_SESSION["logged"] = false;
@@ -45,11 +45,6 @@
         } else {
             $_SESSION["logged"] = true;
         }
-    ?>
-    <?php
-        echo '<pre>';
-        var_dump($_SESSION);
-        echo '</pre>';
     ?>
 </body>
 

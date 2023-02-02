@@ -1,57 +1,52 @@
 let choosen = []
-let del = []
+let toDelete = []
 let id = getIdOfFilm()
-var $_GET = giveGet()
+let $_GET = giveGet()
 let id_film = $_GET.id
 let reserved
 
-function dele() {
-    let d = new FormData()
-    console.log("d1: ", d)
-    d.append('del', JSON.stringify(del))
-    console.log("d2: ", d)
-    console.log("del: ", del);
-    if (del.length > 0) {
+function delete_reservation() {
+    let formData = new FormData()
+    formData.append('toDelete', JSON.stringify(toDelete))
+
+    if (toDelete.length > 0) {
         fetch('./delete_reservation.php', {
             method: 'POST',
-            body: d,
+            body: formData,
         })
-            .then(res => {
-                console.log(res);
+            .then((res) => {
                 location.reload();
             })
     }
 }
 
-document.getElementById("book").addEventListener("click", function (e) {
-    let a = new FormData()
-    a.append('choosen', JSON.stringify(choosen))
-    console.log(a)
+document.getElementById("book").addEventListener("click", () => {
+    let formData = new FormData()
+    formData.append('choosen', JSON.stringify(choosen))
+
     if (choosen.length > 0) {
         fetch('./book.php', {
             method: 'POST',
-            body: a,
+            body: formData
         })
-            .then(res => {
-                console.log(res);
+            .then(() => {
                 location.reload();
             })
     }
 })
 
 fetch('get_reservations.php')
-    .then(function (response) {
+    .then((response) => {
         return response.json()
 
-    }).then(function (data) {
-        console.log(data)
+    }).then((data) => {
         reserved = data
 
         fetch('films.php')
-            .then(function (response) {
+            .then((response) => {
                 return response.json()
 
-            }).then(function (data) {
+            }).then(() => {
                 for (let i = 0; i < 15; i++) {
                     let row = document.createElement("div")
                     row.classList.add("row")
@@ -62,7 +57,7 @@ fetch('get_reservations.php')
                     row.appendChild(rowNumber)
 
                     for (let z = 0; z < 20; z++) {
-                        let tmp = false
+                        let isReserved = false
                         let div = document.createElement("div")
                         div.setAttribute("row", i)
                         div.setAttribute("seat", z)
@@ -73,11 +68,10 @@ fetch('get_reservations.php')
 
                                 if ((reserved[f].id == id || id == 5) && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
                                     div.style.backgroundColor = "green"
-
                                     break
                                 } else if (reserved[f].id != id && id_film == reserved[f].id_film && i == reserved[f].row && z == reserved[f].seat) {
                                     div.style.backgroundColor = "red"
-                                    tmp = true
+                                    isReserved = true
                                     break
                                 } else {
                                     div.style.backgroundColor = "white"
@@ -87,7 +81,7 @@ fetch('get_reservations.php')
                             div.style.backgroundColor = "white"
                         }
 
-                        if (tmp == false) {
+                        if (isReserved == false) {
                             div.addEventListener("click", function (e) {
                                 if (e.target.style.backgroundColor == "white") {
                                     e.target.style.backgroundColor = "yellow"
@@ -105,13 +99,13 @@ fetch('get_reservations.php')
                                         }
                                     }
                                 } else if (e.target.style.backgroundColor == "green") {
-                                    del.push({
+                                    toDelete.push({
                                         id: id,
                                         row: e.target.getAttribute("row"),
                                         seat: e.target.getAttribute("seat"),
                                         id_film: id_film
                                     })
-                                    dele()
+                                    delete_reservation()
                                 }
                             })
                         }
